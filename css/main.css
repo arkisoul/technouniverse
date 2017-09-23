@@ -10,7 +10,7 @@
   Fonts
   ========================================================================== */
 
-  @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900');
+  @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Cookie|Raleway');
 
 
 /* ==========================================================================
@@ -87,6 +87,18 @@ fieldset {
 
 textarea {
   resize: vertical;
+}
+
+/*
+ * Stylish text fonts for headings and paragraphs
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cookie', cursive;
+}
+
+html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, table, caption, figcaption, figure, button, article, address, pre {
+  font-family: 'Raleway', sans-serif;
 }
 
 /* ==========================================================================
@@ -204,6 +216,148 @@ textarea {
 .tile-contact .landing-tile {
   background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
 }
+
+/* ==========================================================================
+  Navigation Styles
+  ========================================================================== */
+
+/* ==========================================================================
+  About Us Page Styles
+  ========================================================================== */
+
+/* ==========================================================================
+  Services Page Styles
+  ========================================================================== */
+
+/* ==========================================================================
+  Products Page Styles
+  ========================================================================== */
+
+  .techno-product-main {
+    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+  }
+
+  .product-img {
+    background: url('../img/bg1.jpg') center center scroll;
+    background-size: cover;
+    transition: all ease-out 0.5s;
+  }
+
+  .product-desc {
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all ease-in 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    color: #fff ;
+    width: 100%;
+  }
+
+  .product-box:hover {
+    height: 200%;
+  }
+
+  .product-box:hover .product-desc {
+    visibility: visible;
+    opacity: 1.0;
+  }
+
+/* ==========================================================================
+  Portfolio Page Styles
+  ========================================================================== */
+
+  .folio-container {
+    overflow-x: auto;
+  }
+
+  .folio-one {
+    background: url('../img/bubble1.jpg') center center scroll;
+  }
+
+  .folio-two {
+    background: url('../img/bubble2.jpg') center center scroll;
+  }
+
+  .folio-three {
+    background: url('../img/bubble3.jpg') center center scroll;
+  }
+
+  .folio-four {
+    background: url('../img/bubble4.jpg') center center scroll;
+  }
+
+  .folio-five {
+    background: url('../img/bubble5.jpg') center center scroll;
+  }
+
+  .folio-six {
+    background: url('../img/bubble6.jpg') center center scroll;
+  }
+
+  .folio {
+    background-size: cover;
+    transition: all ease-in-out 0.4s;
+    overflow-y: auto;
+  }
+
+  .folio-head {
+    writing-mode: vertical-rl;
+  }
+
+  .folio-title {
+    /* writing-mode: vertical-rl; */
+    transform: rotate(180deg);
+    transition: all ease-in 0.4s;
+  }
+
+  .folio-content {
+    display: none;
+    transition: all ease-in 0.4s;
+  }
+
+  .folio-img-box {
+    display: none;
+    transition: all ease-in 0.4s;
+  }
+
+  .folio:hover {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  .folio:hover .folio-head {
+    writing-mode: horizontal-tb;
+  }
+
+  .folio:hover .folio-title {
+    /* writing-mode: horizontal-tb; */
+    transform: rotate(0deg);
+  }
+
+  .folio:hover .folio-content {
+    display: initial;
+  }
+
+  .folio:hover .folio-img-box {
+    display: initial;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .folio:hover {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+/* ==========================================================================
+  Contact Us Page Styles
+  ========================================================================== */
+
+  .techno-contact-main {
+    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+  }
 
 /* ==========================================================================
   Author's custom animation
