@@ -222,12 +222,104 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   ========================================================================== */
 
 /* ==========================================================================
+  Home Page Styles
+  ========================================================================== */
+
+  #fullpage section {
+    text-align: center;
+  }
+
+/* ==========================================================================
   About Us Page Styles
   ========================================================================== */
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    overflow: hidden;
+    background: #238acb;
+    z-index: 1000;
+  }
+
+  /* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
+  body {
+    overflow-x: hidden;
+  }
+
+  /**
+    * important: keep position fixed, you can however use top:0 instead of bottom:0
+    * if you want to make it stick to the top of the browser
+    */
+  .scroll {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  .horizon {
+    line-height: 0;
+    z-index: 100;
+    width: 3000px;
+  }
+
+  .middle {
+    z-index: 250;
+    line-height: 0;
+    width: 4500px;
+  }
+
+  .front {
+    z-index: 500;
+    top: 150px;
+    width: 6000px;
+  }
+
+  .intro {
+    position: absolute;
+    left: 400px;
+    top: 0px;
+    padding-right: 50px;
+  }
+
+  .page {
+    top: 0px;
+    width: 500px;
+    background: white;
+    padding: 10px 30px;
+    border: 1px #eee solid;
+    position: absolute;
+  }
+
+  .description {
+    left: 1500px;
+  }
+
+  .documentation {
+    left: 2450px;
+    width: 700px;
+  }
+
+  .options {
+    width: 700px;
+    left: 3800px;
+  }
+
+  .download {
+    width: 500px;
+    left: 5100px;
+  }
 
 /* ==========================================================================
   Services Page Styles
   ========================================================================== */
+
+  .techno-services-main {
+    background: url('../img/services-bg.jpg') 50% 50% no-repeat scroll;
+    background-size: cover;
+  }
 
 /* ==========================================================================
   Products Page Styles
@@ -237,31 +329,48 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
   }
 
-  .product-img {
+  .prod-one.shutter-in-vertical::before {
     background: url('../img/bg1.jpg') center center scroll;
     background-size: cover;
-    transition: all ease-out 0.5s;
+  }
+
+  .prod-two.shutter-in-vertical::before {
+    background: url('../img/bg2.jpg') center center scroll;
+    background-size: cover;
+  }
+
+  .prod-three.shutter-in-vertical::before {
+    background: url('../img/bg3.jpg') center center scroll;
+    background-size: cover;
+  }
+
+  .product-img {
+    transition: all ease-in 0.4s;
+    opacity: 0.6;
+  }
+
+  .product-title {
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    transition: all ease-in 0.4s;
   }
 
   .product-desc {
-    position: absolute;
-    left: 0;
-    bottom: 0%;
-    background: rgba(0, 0, 0, 0.6);
+    opacity: 0.0;
     transition: all ease-in 0.5s;
-    visibility: hidden;
-    opacity: 0;
-    color: #fff ;
-    width: 100%;
-  }
-
-  .product-box:hover {
-    height: 200%;
   }
 
   .product-box:hover .product-desc {
-    visibility: visible;
     opacity: 1.0;
+  }
+
+  .product-box:hover .product-img {
+    justify-content: start !important;
+    opacity: 1.0;
+  }
+
+  .product-box:hover .product-title {
+    background: none;
   }
 
 /* ==========================================================================
@@ -382,7 +491,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     left: 0;
     right: 0;
     bottom: 0;
-    background: #ecf0f1;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
     border-radius: 100%;
     -webkit-transform: scale(2);
     transform: scale(2);
@@ -394,6 +503,41 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   .radial-in:hover::before {
     -webkit-transform: scale(0);
     transform: scale(0);
+  }
+
+  .shutter-in-vertical {
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%) !important;
+    -webkit-transition: color 300ms;
+    transition: color 300ms;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .shutter-in-vertical::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../img/bg1.jpg') center center scroll;
+    background-size: cover;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition: 300ms ease-out;
+    transition: 300ms ease-out;
+  }
+  .shutter-in-vertical:hover::before {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
   }
 
 
