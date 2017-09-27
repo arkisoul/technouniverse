@@ -116,6 +116,86 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   Author's custom styles
   ========================================================================== */
 
+  /* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
+  body {
+    overflow-x: hidden;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 56px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 750;
+  }
+
+  .main-content {
+    overflow-y: auto;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 750;
+    background-color: #f8f9fa !important;
+  }
+
+  .company-name {
+    font-weight: 700;
+    color: #3F7E29;
+  }
+
+  .footer-social-nav .list-inline-item {
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all ease-in 0.3s;
+    background-color: #3F7E29;
+  }
+
+  .fb-bg:hover {
+    background-color: #4868A5;
+  }
+
+  .twitter-bg:hover {
+    background-color: #00A2EC;
+  }
+
+  .gplus-bg:hover {
+    background-color: #EF403B;
+  }
+
+  .footer-social-nav li a {
+    color: #fff;
+  }
+
+  @media only screen and (max-width: 575px) {
+    .copyright-act {
+      margin-bottom: .5rem;
+    }
+  }
+
+  .heading-bottom-border {
+    position: relative;
+  }
+
+  .heading-bottom-border::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    content: '';
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
 /* ==========================================================================
   Landing Page styles
   ========================================================================== */
@@ -221,6 +301,18 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   Navigation Styles
   ========================================================================== */
 
+  @media only screen and (max-width: 991px) {
+    #technoUniverseNavbar {
+      position: fixed;
+      background-color: #f8f9fa !important;
+      width: 100%;
+      left: 0;
+      top: 56px;
+      right: 0;
+      padding-left: 2rem;
+    }
+  }
+
 /* ==========================================================================
   Home Page Styles
   ========================================================================== */
@@ -229,25 +321,37 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     text-align: center;
   }
 
+  #first-section {
+    background: url('../img/bg1.jpg') no-repeat center center scroll;
+    background-size: cover;
+    width: 100%;
+  }
+
+  .section-img {
+    transition: all ease-in 0.4s;
+  }
+
+  .section-title {
+    font-size: 3.4rem;
+    color: #f49;
+    line-height: 5rem;
+    transition: all ease-in 0.4s;
+  }
+
+  .section-subtitle {
+    font-size: 2.5rem;
+    color: #3F7E29;
+    transition: all ease-in 0.5s;
+  }
+
+  #second-section, #third-section, #fourth-section {
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    width: 100%;
+  }
+
 /* ==========================================================================
   About Us Page Styles
   ========================================================================== */
-
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 70px;
-    width: 100%;
-    overflow: hidden;
-    background: #238acb;
-    z-index: 1000;
-  }
-
-  /* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
-  body {
-    overflow-x: hidden;
-  }
 
   /**
     * important: keep position fixed, you can however use top:0 instead of bottom:0
@@ -316,7 +420,8 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   Services Page Styles
   ========================================================================== */
 
-  .techno-services-main {
+  #techno-services-main {
+    margin-top: 45px;
     background: url('../img/services-bg.jpg') 50% 50% no-repeat scroll;
     background-size: cover;
   }
@@ -325,7 +430,8 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   Products Page Styles
   ========================================================================== */
 
-  .techno-product-main {
+  #techno-product-main {
+    margin-top: 45px;
     background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
   }
 
@@ -376,6 +482,10 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 /* ==========================================================================
   Portfolio Page Styles
   ========================================================================== */
+
+  #techno-portfolio-main {
+    margin-top: 45px;
+  }
 
   .folio-container {
     overflow-x: auto;
@@ -464,7 +574,8 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   Contact Us Page Styles
   ========================================================================== */
 
-  .techno-contact-main {
+  #techno-contact-main {
+    margin-top: 45px;
     background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
   }
 
@@ -483,6 +594,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
   }
+
   .radial-in::before {
     content: "";
     position: absolute;
@@ -500,6 +612,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     -webkit-transition: 300ms ease-out;
     transition: 300ms ease-out;
   }
+
   .radial-in:hover::before {
     -webkit-transform: scale(0);
     transform: scale(0);
@@ -516,6 +629,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
   }
+
   .shutter-in-vertical::before {
     content: "";
     position: absolute;
@@ -535,11 +649,43 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     -webkit-transition: 300ms ease-out;
     transition: 300ms ease-out;
   }
+
   .shutter-in-vertical:hover::before {
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
   }
 
+  .sweep-to-top {
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: color 1000ms;
+    transition: color 1000ms;
+  }
+
+  .sweep-to-top::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098d1;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition: 300ms ease-out;
+    transition: 300ms ease-out;
+  }
+
+  .sweep-to-top:hover::before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
 
 /* ==========================================================================
   Helper classes

@@ -64,6 +64,16 @@ function resizeServiceBg(h) {
   servicesBg.animate({height: uh}, 400);
 }
 
+$.fn.extend({
+    animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+        });
+        return this;
+    }
+});
+
 $(document).ready(function() {
   resizeTiles(innerHeight);
   resizeMap(innerHeight);
@@ -76,41 +86,44 @@ $(document).ready(function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#5C832F', '#B8B89F'],
+  sectionsColor: ['#F2AE72', '#F2AE72', '#F2AE72', '#F2AE72'],
   sectionSelector: '.vertical-scrolling',
-  slideSelector: '.horizontal-scrolling',
-  parallax: true,
-  navigation: true,
+  // slideSelector: '.horizontal-scrolling',
+  navigation: false,
   slidesNavigation: true,
   controlArrows: false,
-  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection'],
+  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection'],
   menu: '#menu',
 
   afterLoad: function(anchorLink, index) {
-    $header_top.css('background', 'rgba(0, 47, 77, .3)');
-  },
+    // console.log(anchorLink);
+    // console.log(index);
+    if(anchorLink == 'secondSection') {
+      $("#second-section .section-img").animateCss('slideInUp');
+      $("#second-section .section-title").animateCss('fadeInLeft');
+      $("#second-section .section-subtitle").animateCss('fadeInRight');
+    }
 
-  onLeave: function(index, nextIndex, direction) {
-    if(index == 5) {
-      $('#fp-nav').show();
+    if(anchorLink == 'thirdSection') {
+      $("#third-section .section-img").animateCss('slideInDown');
+      $("#third-section .section-title").animateCss('slideInLeft');
+      $("#third-section .section-subtitle").animateCss('slideInRight');
     }
   },
 
+  onLeave: function(index, nextIndex, direction) {
+    // console.log(index);
+    // console.log(nextIndex);
+    // console.log(direction);
+  },
+
   afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {
-    if(anchorLink == 'fifthSection' && slideIndex == 1) {
-      $.fn.fullpage.setAllowScrolling(false, 'up');
-      $header_top.css('background', 'transparent');
-      $nav.css('background', 'transparent');
-      $(this).css('background', '#374140');
-      $(this).find('h2').css('color', 'white');
-      $(this).find('h3').css('color', 'white');
-      $(this).find('p').css(
-        {
-          'color': '#DC3522',
-          'opacity': 1,
-          'transform': 'translateY(0)'
-        }
-      );
+    console.log(anchorLink);
+    console.log(index);
+    console.log(slideAnchor);
+    console.log(slideIndex);
+    if(anchorLink == 'secondSection') {
+      $(".second-section .section-title").animateCss('bounceInUp');
     }
   },
 

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
     <link rel="stylesheet" href="css/jquery.fullpage.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -57,24 +58,38 @@
       </div>
     </nav> <!-- End of Navigation -->
 
-    <main id="techno-home-main" class="techno-home-main">
+    <main id="techno-home-main" class="main-content">
       <div class="container-fluid">
         <div class="row">
           <!-- Full Page Scroll vertical Slider -->
           <div id="fullpage">
-            <section class="vertical-scrolling">
-              <h2>fullPage.js</h2>
-              <h3>This is the first section</h3>
+            <section class="vertical-scrolling" id="first-section">
+              <h1 class="section-title heading-bottom-border text-capitalize animated fadeInDown">TechnoUniverse Infosystem</h1>
+              <h3 class="section-subtitle text-capitalize animated fadeInDown">We breath lives into your dreams</h3>
             </section>
-            <section class="vertical-scrolling">
-              <h2>fullPage.js</h2>
-              <h3>This is the second section</h3>
+            <section class="vertical-scrolling" id="second-section">
+              <div class="row">
+                <div class="col-sm-6 col-12">
+                  <img src="img/web_development.png" alt="Web Development" class="img-fluid section-img" />
+                </div>
+                <div class="col-sm-6 col-12">
+                  <h1 class="section-title heading-bottom-border text-captialize">Web Development</h1>
+                  <h3 class="section-subtitle text-captialize">We turn your ideas into reality</h3>
+                </div>
+              </div>
             </section>
-            <section class="vertical-scrolling">
-              <h2>fullPage.js</h2>
-              <h3>This is the third section</h3>
+            <section class="vertical-scrolling" id="third-section">
+              <div class="row">
+                <div class="col-sm-6 col-12">
+                  <h1 class="section-title heading-bottom-border text-captialize">Mobile App Development</h1>
+                  <h3 class="section-subtitle text-captialize">We turn your ideas into reality</h3>
+                </div>
+                <div class="col-sm-6 col-12">
+                  <img src="img/mobile_app.jpg" alt="Mobile App Development" class="img-fluid section-img" />
+                </div>
+              </div>
             </section>
-            <section class="vertical-scrolling">
+            <!-- <section class="vertical-scrolling" id="fourth-section">
               <h2>fullPage.js</h2>
               <h3>This is the fourth section</h3>
             </section>
@@ -88,7 +103,7 @@
                 <h3>This is the second slide</h3>
                 <p class="end">Thank you!</p>
               </div>
-            </section>
+            </section> -->
           </div>
 
         </div> <!-- End Row -->
@@ -99,12 +114,12 @@
 
     <footer class="footer">
       <div class="container-fluid">
-        <div class="d-flex justify-content-between p-3">
+        <div class="d-flex justify-content-center justify-content-sm-between flex-sm-row flex-column align-items-center p-3">
           <div class="copyright-act">
             <p class="text-mute m-0">Copyright &copy; 2017 <span class="company-name">TechnoUniverse InfoSystems</span></p>
           </div>
-          <div class="footer-social-nav" role="navigation" title="Social Nav bar">
-            <ul class="list-inline mb-0">
+          <div class="footer-nav" role="navigation" title="Social Nav bar">
+            <ul class="list-inline mb-0 footer-social-nav">
               <li class="list-inline-item fb-bg">
                 <a href="https://www.facebook.com/TechnoUniverse-906194702788358/?ref=hl"><i class="fa fa-facebook" aria-hidden="true"></i></a>
               </li>
