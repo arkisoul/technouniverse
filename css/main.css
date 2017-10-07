@@ -10,7 +10,7 @@
   Fonts
   ========================================================================== */
 
-  @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Cookie|Raleway');
+  @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:900|Raleway|Comfortaa:700');
 
 
 /* ==========================================================================
@@ -94,7 +94,7 @@ textarea {
  */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cookie', cursive;
+  font-family: 'Arima Madurai', cursive;
 }
 
 html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, table, caption, figcaption, figure, button, article, address, pre {
@@ -208,39 +208,48 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 .landing-tile {
   width: 100%;
   height: auto;
-  opacity: 0.65;
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  opacity: 0.9;
+  box-shadow: 1px 1px 1px #1f2fff;
+  z-index: 1;
 }
 
 .tile-title {
-  font-family: 'Arima Madurai', cursive;
-  font-size: 3em;
-  color: #fff;
+  font: 40px 'Comfortaa';
+  margin-top: 0.5rem;
+  color: #0fe0ff;
+  text-shadow: 0px 1px 1px #0fd0ff;
+  letter-spacing: 10px;
   text-transform: uppercase;
   transition: color ease-in-out 0.4s;
 }
 
 .landing-tile:hover {
-  opacity: 0.85;
   cursor: pointer;
+  z-index: 11;
+  box-shadow: 3px 3px 8px #1f2fff;
 }
 
 .landing-tile:hover .tile-title {
-  color: #000;
+  color: #fefefe;
+  text-shadow: 0px 1px 1px #fbfbfb;
 }
 
 .landing-tile > .fa {
-  color: #fff;
+  color: #0fe0ee;
+  text-shadow: 0px 1px 1px #0fd0f1;
+  font-size: 3rem;
   transition: color ease-in-out 0.4s;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .landing-tile:hover .fa {
-  color: #1a1a1a;
+  color: #fefefe;
+  text-shadow: 0px 1px 1px #fbfbfb;
 }
 
 .tile-home {
@@ -278,23 +287,23 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 }
 
 .tile-about .landing-tile {
-  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 }
 
 .tile-services .landing-tile {
-  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-image: linear-gradient(45deg, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
 }
 
 .tile-products .landing-tile {
-  background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+  background-image: linear-gradient(45deg, #feada6 0%, #f5efef 100%);
 }
 
 .tile-portfolio .landing-tile {
-  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  background-image: linear-gradient(45deg, #ff758c 0%, #ff7eb3 100%);
 }
 
 .tile-contact .landing-tile {
-  background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+  background-image: linear-gradient(45deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
 }
 
 /* ==========================================================================
@@ -317,13 +326,23 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   Home Page Styles
   ========================================================================== */
 
+  #techno-home-main {
+    margin-top: 56px;
+  }
+
   #fullpage section {
     text-align: center;
   }
 
-  #first-section {
-    background: url('../img/bg1.jpg') no-repeat center center scroll;
-    background-size: cover;
+  #first-section .content-top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  #first-section .content-bottom {
+    position: absolute;
+    bottom: 20%;
     width: 100%;
   }
 
@@ -333,19 +352,20 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .section-title {
     font-size: 3.4rem;
-    color: #f49;
+    color: #005bea;
     line-height: 5rem;
     transition: all ease-in 0.4s;
   }
 
   .section-subtitle {
     font-size: 2.5rem;
-    color: #3F7E29;
+    color: #0fe0ee;
     transition: all ease-in 0.5s;
+    margin-top: 1rem;
   }
 
-  #second-section, #third-section, #fourth-section {
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  #first-section, #second-section, #third-section, #fourth-section {
+    /* background-image: linear-gradient(90deg, #fdfcfb 0%, #e2d1c3 100%); */
     width: 100%;
   }
 
@@ -390,29 +410,27 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .page {
     top: 0px;
-    width: 500px;
-    background: white;
+    width: 700px;
+    background: #fff;
     padding: 10px 30px;
     border: 1px #eee solid;
+    box-shadow: 1px 2px 4px #ddd;
     position: absolute;
   }
 
-  .description {
+  .about-vertical-one {
     left: 1500px;
   }
 
-  .documentation {
-    left: 2450px;
-    width: 700px;
+  .about-vertical-two {
+    left: 2700px;
   }
 
-  .options {
-    width: 700px;
-    left: 3800px;
+  .about-more {
+    left: 3900px;
   }
 
-  .download {
-    width: 500px;
+  .about-team {
     left: 5100px;
   }
 
@@ -421,9 +439,49 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   ========================================================================== */
 
   #techno-services-main {
-    margin-top: 45px;
-    background: url('../img/services-bg.jpg') 50% 50% no-repeat scroll;
-    background-size: cover;
+    margin-top: 56px;
+    background-color: #fcf3e8;
+    z-index: 11;
+    box-shadow: 1px 1px 4px 2px #eee;
+  }
+
+  #techno-services-main .card {
+    border-radius: 14px !important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  #techno-services-main .card:hover {
+    z-index: 11;
+    box-shadow: 2px 2px 4px 2px #ddd;
+    transform: scale(1.05);
+  }
+
+  .service-img {
+    border-radius: 14px 14px 0 0 !important;
+  }
+
+  #service1 {
+    background-image: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 25%, #fad0c4 40%);
+  }
+
+  #service2 {
+    background-image: linear-gradient(135deg, #4facfe 0%, #00f2fe 25%, #00f2fe 40%);
+  }
+
+  #service3 {
+    background-image: linear-gradient(135deg, #b3ffab 0%, #12fff7 25%, #12fff7 40%);
+  }
+
+  .btn-know-more {
+    background-color: rgb(251, 71, 107);
+    color: #fefefe;
+    box-shadow: 1px 1px 1px #ff0844;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 50%;
   }
 
 /* ==========================================================================
@@ -431,60 +489,84 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   ========================================================================== */
 
   #techno-product-main {
-    margin-top: 45px;
-    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+    margin-top: 56px;
+    background-color: #fff6ed;
   }
 
-  .prod-one.shutter-in-vertical::before {
-    background: url('../img/bg1.jpg') center center scroll;
-    background-size: cover;
+  .product-container {
+    position: relative;
+    padding: 1rem;
+    overflow-y: auto;
   }
 
-  .prod-two.shutter-in-vertical::before {
-    background: url('../img/bg2.jpg') center center scroll;
-    background-size: cover;
+  #product1 {
+    background-color: #fb8532 !important;
+    width: 275px;
+    height: 275px;
+    top: 15%;
+    left: 15%;
+    transition: all ease-out 0.5s;
+    box-shadow: 4px 4px 16px 4px #fc7820;
+    padding: 4.5rem;
   }
 
-  .prod-three.shutter-in-vertical::before {
-    background: url('../img/bg3.jpg') center center scroll;
-    background-size: cover;
+  #product2 {
+    background-color: #0366d6 !important;
+    width: 225px;
+    height: 225px;
+    top: 20%;
+    right: 20%;
+    transition: all ease-out 0.5s;
+    box-shadow: 4px 4px 16px 4px #035fc1;
+    padding: 2.5rem;
   }
 
-  .product-img {
-    transition: all ease-in 0.4s;
-    opacity: 0.6;
+  #product3 {
+    background-color: #6f42c1 !important;
+    width: 205px;
+    height: 205px;
+    top: 58%;
+    left: 40%;
+    transition: all ease-out 0.5s;
+    box-shadow: 4px 4px 16px 4px #6637bf;
+    padding: 2.2rem;
   }
 
-  .product-title {
-    background: rgba(255, 255, 255, 0.8);
+  .product {
+    border-radius: 50%;
+    color: #fefefe;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+  }
+
+  #product1.active, #product2.active, #product3.active {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    transition: all ease-in 0.4s;
+    height: 100%;
+    border-radius: 0;
+    z-index: 11;
   }
 
-  .product-desc {
-    opacity: 0.0;
-    transition: all ease-in 0.5s;
+  .product-content {
+    display: none;
   }
 
-  .product-box:hover .product-desc {
-    opacity: 1.0;
+  .product.active .product-content {
+    display: initial;
   }
 
-  .product-box:hover .product-img {
-    justify-content: start !important;
-    opacity: 1.0;
-  }
-
-  .product-box:hover .product-title {
-    background: none;
-  }
 
 /* ==========================================================================
   Portfolio Page Styles
   ========================================================================== */
 
   #techno-portfolio-main {
-    margin-top: 45px;
+    margin-top: 56px;
   }
 
   .folio-container {
@@ -493,26 +575,32 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .folio-one {
     background: url('../img/bubble1.jpg') center center scroll;
+    /* background-color: #cecece; */
   }
 
   .folio-two {
     background: url('../img/bubble2.jpg') center center scroll;
+    /* background-color: #dedede; */
   }
 
   .folio-three {
     background: url('../img/bubble3.jpg') center center scroll;
+    /* background-color: #eee; */
   }
 
   .folio-four {
     background: url('../img/bubble4.jpg') center center scroll;
+    /* background-color: #ddd; */
   }
 
   .folio-five {
     background: url('../img/bubble5.jpg') center center scroll;
+    /* background-color: #eee; */
   }
 
   .folio-six {
     background: url('../img/bubble6.jpg') center center scroll;
+    /* background-color: #f9f9f9; */
   }
 
   .folio {
@@ -575,7 +663,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   ========================================================================== */
 
   #techno-contact-main {
-    margin-top: 45px;
+    margin-top: 56px;
     background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
   }
 
@@ -603,7 +691,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    background-color: rgba(10, 110, 210, 0.7);
     border-radius: 100%;
     -webkit-transform: scale(2);
     transform: scale(2);
@@ -686,6 +774,9 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
   }
+
+  .cp-spinner{width:48px;height:48px;display:inline-block;box-sizing:border-box;position:relative}.cp-skeleton{border-radius:50%;border-top:solid 6px #f56151;border-right:solid 6px transparent;border-bottom:solid 6px transparent;border-left:solid 6px transparent;animation:cp-skeleton-animate 1s linear infinite}.cp-skeleton:before{border-radius:50%;content:" ";width:48px;height:48px;display:inline-block;box-sizing:border-box;border-top:solid 6px transparent;border-right:solid 6px transparent;border-bottom:solid 6px transparent;border-left:solid 6px #f56151;position:absolute;top:-6px;left:-6px;transform:rotateZ(-30deg)}.cp-skeleton:after{border-radius:50%;content:" ";width:48px;height:48px;display:inline-block;box-sizing:border-box;border-top:solid 6px transparent;border-right:solid 6px #f56151;border-bottom:solid 6px transparent;border-left:solid 6px transparent;position:absolute;top:-6px;right:-6px;transform:rotateZ(30deg)}@keyframes cp-skeleton-animate{0%{transform:rotate(0);opacity:1}50%{opacity:.7}100%{transform:rotate(360deg);opacity:1}}
+
 
 /* ==========================================================================
   Helper classes

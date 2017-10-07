@@ -7,10 +7,8 @@
 var tile = $('.landing-tile');
 var mapWrap = $('.map-wrap');
 var folioContainer = $('.folio-container');
-var productBox = $('.product-box');
-var productImg = $('.product-img');
 var servicesBg = $('.services-container');
-var productCounts = productBox.length;
+var productMain = $('.product-container');
 var innerHeight = $(window).innerHeight();
 var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
   {
@@ -28,7 +26,7 @@ $(window).resize(function(event) {
   setInterval(resizeTiles(h), 400);
   setInterval(resizeMap(h), 400);
   setInterval(resizeFolio(h), 400);
-  setInterval(resizeProductBox(h, productCounts), 400);
+  setInterval(resizeProductBox(h), 400);
 
 });
 
@@ -44,10 +42,8 @@ function resizeFolio(h) {
   folioContainer.animate({height: h-112}, 400);
 }
 
-function resizeProductBox(h, c) {
-  var uh = (h-112)/c;
-  productBox.animate({height: uh}, 400);
-  productImg.animate({height: uh}, 400);
+function resizeProductBox(h) {
+  productMain.animate({height: h - 112}, 400);
 }
 
 function fateOfElem() {
@@ -79,17 +75,23 @@ $(document).ready(function() {
   resizeMap(innerHeight);
   resizeFolio(innerHeight);
   resizeServiceBg(innerHeight);
-  resizeProductBox(innerHeight, productCounts);
+  resizeProductBox(innerHeight);
+
+  $('body').on('click', '.product', function(event) {
+    event.preventDefault();
+    /* Act on the event */
+    $(this).toggleClass('active');
+  });
 });
 
 // Full Page Vertical Slider
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#F2AE72', '#F2AE72', '#F2AE72', '#F2AE72'],
+  sectionsColor: ['#F0F2F4', '#fff', '#fff'],
   sectionSelector: '.vertical-scrolling',
   // slideSelector: '.horizontal-scrolling',
-  navigation: false,
+  navigation: true,
   slidesNavigation: true,
   controlArrows: false,
   anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection'],
@@ -112,26 +114,14 @@ $('#fullpage').fullpage({
   },
 
   onLeave: function(index, nextIndex, direction) {
-    // console.log(index);
-    // console.log(nextIndex);
-    // console.log(direction);
   },
 
   afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {
-    console.log(anchorLink);
-    console.log(index);
-    console.log(slideAnchor);
-    console.log(slideIndex);
     if(anchorLink == 'secondSection') {
       $(".second-section .section-title").animateCss('bounceInUp');
     }
   },
 
   onSlideLeave: function( anchorLink, index, slideIndex, direction) {
-    if(anchorLink == 'fifthSection' && slideIndex == 1) {
-      $.fn.fullpage.setAllowScrolling(true, 'up');
-      $header_top.css('background', 'rgba(0, 47, 77, .3)');
-      $nav.css('background', 'rgba(0, 47, 77, .25)');
-    }
   }
 });
