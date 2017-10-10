@@ -28,43 +28,47 @@
     <!-- Navigation -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light header">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#technoUniverseNavbar" aria-controls="technoUniverseNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Navbar</a>
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#technoUniverseNavbar" aria-controls="technoUniverseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Logo" />
+        </a>
 
-      <div class="collapse navbar-collapse" id="technoUniverseNavbar">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="home.html">Home</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.html">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="technoUniverseNavbar">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav> <!-- End of Navigation -->
 
     <main id="techno-about-main" class="main-content">
     <div class="about-us-content">
       <div class="horizon scroll">
-        <img src="img/horizon.png" alt="" />
+        <img src="img/horizon.png" alt="horizon" class="img-fluid" />
       </div>
 
       <div class="middle scroll">
-        <img src="img/middle.png" alt="" />
+        <img src="img/middle.png" alt="horizon" class="img-fluid" />
       </div>
 
       <div class="front scroll">
@@ -100,13 +104,13 @@
           <h2 class="heading-bottom-border text-center">Our team</h2>
           <div class="container-fluid mt-3">
             <div class="row">
-              <div class="col">
+              <div class="col-sm-6">
                 <figure class="w-75 mx-auto">
                   <img src="img/avatar-female.jpeg" alt="Team Member" class="img-fluid team-member" />
                   <figcaption class="text-center">ABC, Director & co-founder</figcaption>
                 </figure>
               </div>
-              <div class="col">
+              <div class="col-sm-6">
                 <figure class="w-75 mx-auto">
                   <img src="img/avatar-male.jpeg" alt="Team Member" class="img-fluid team-member" />
                   <figcaption class="text-center">XYZ, Co-founder & CEO</figcaption>
@@ -123,7 +127,7 @@
 
     <footer class="footer">
       <div class="container-fluid">
-        <div class="d-flex justify-content-center justify-content-sm-between flex-sm-row flex-column align-items-center p-3">
+        <div class="d-flex justify-content-center justify-content-sm-between flex-sm-row flex-column align-items-center py-3">
           <div class="copyright-act">
             <p class="text-mute m-0">Copyright &copy; 2017 <span class="company-name">TechnoUniverse InfoSystems</span></p>
           </div>

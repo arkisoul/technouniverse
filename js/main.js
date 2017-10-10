@@ -10,13 +10,24 @@ var folioContainer = $('.folio-container');
 var servicesBg = $('.services-container');
 var productMain = $('.product-container');
 var innerHeight = $(window).innerHeight();
-var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
-  {
- // height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
-  onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
-      // console.log(percent);
-  }
-});
+// var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+//   {
+//     height: "auto",                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+//   onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+//       // console.log(percent);
+//   }
+// });
+
+if ($(window).width() > 768) {
+  var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+    {
+      height: "auto",                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+    onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+        // console.log(percent);
+    }
+  });
+}
+
 var $header_top = $('.header');
 var $nav = $('nav');
 
@@ -27,7 +38,6 @@ $(window).resize(function(event) {
   setInterval(resizeMap(h), 400);
   setInterval(resizeFolio(h), 400);
   setInterval(resizeProductBox(h), 400);
-
 });
 
 function resizeTiles(h) {
@@ -43,7 +53,11 @@ function resizeFolio(h) {
 }
 
 function resizeProductBox(h) {
-  productMain.animate({height: h - 112}, 400);
+  if ($(window).width() > 768) {
+    productMain.animate({height: h - 112}, 400);
+  } else {
+    productMain.height("auto");
+  }
 }
 
 function fateOfElem() {
@@ -57,7 +71,11 @@ function fateOfElem() {
 
 function resizeServiceBg(h) {
   var uh = h-112;
-  servicesBg.animate({height: uh}, 400);
+  if ($(window).width() > 768) {
+    servicesBg.animate({height: uh}, 400);
+  } else {
+    servicesBg.height("auto");
+  }
 }
 
 $.fn.extend({
@@ -88,7 +106,7 @@ $(document).ready(function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-  sectionsColor: ['#F0F2F4', '#fff', '#fff'],
+  sectionsColor: ['#f3f0ec', '#f3f0ec', '#f3f0ec'],
   sectionSelector: '.vertical-scrolling',
   // slideSelector: '.horizontal-scrolling',
   navigation: true,

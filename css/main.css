@@ -119,6 +119,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   /* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
   body {
     overflow-x: hidden;
+    background-color: #f3f0ec;
   }
 
   .header {
@@ -179,10 +180,12 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     .copyright-act {
       margin-bottom: .5rem;
     }
+    .copyright-act p, .copyright-act span { font-size: 0.8rem; }
   }
 
   .heading-bottom-border {
     position: relative;
+        font-size:26px;
   }
 
   .heading-bottom-border::after {
@@ -194,6 +197,10 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  .container-fluid {
+    max-width: 1800px;
   }
 
 /* ==========================================================================
@@ -223,7 +230,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   margin-top: 0.5rem;
   color: #0fe0ff;
   text-shadow: 0px 1px 1px #0fd0ff;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   transition: color ease-in-out 0.4s;
 }
@@ -283,32 +290,37 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 }
 
 .tile-home .landing-tile {
-  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
 .tile-about .landing-tile {
-  background-image: linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
 .tile-services .landing-tile {
-  background-image: linear-gradient(45deg, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
 }
 
 .tile-products .landing-tile {
-  background-image: linear-gradient(45deg, #feada6 0%, #f5efef 100%);
+  background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
 }
 
 .tile-portfolio .landing-tile {
-  background-image: linear-gradient(45deg, #ff758c 0%, #ff7eb3 100%);
+ background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
 }
 
 .tile-contact .landing-tile {
-  background-image: linear-gradient(45deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+  background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
 }
 
 /* ==========================================================================
   Navigation Styles
   ========================================================================== */
+
+  .nav-link {
+    font-size: 18px;
+    font-weight: 600;
+  }
 
   @media only screen and (max-width: 991px) {
     #technoUniverseNavbar {
@@ -320,6 +332,10 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
       right: 0;
       padding-left: 2rem;
     }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .header .navbar-brand img { max-width: 210px; }
   }
 
 /* ==========================================================================
@@ -334,16 +350,28 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     text-align: center;
   }
 
+  #first-section .fp-tableCell {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 66px;
+  }
+
   #first-section .content-top {
-    position: absolute;
-    top: 0;
-    width: 100%;
+    margin-bottom: 2rem;
   }
 
   #first-section .content-bottom {
-    position: absolute;
-    bottom: 20%;
-    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  #second-section .fp-tableCell, #third-section .fp-tableCell {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 66px;
   }
 
   .section-img {
@@ -351,7 +379,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   }
 
   .section-title {
-    font-size: 3.4rem;
+    font-size: 3.0em;
     color: #005bea;
     line-height: 5rem;
     transition: all ease-in 0.4s;
@@ -367,6 +395,23 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   #first-section, #second-section, #third-section, #fourth-section {
     /* background-image: linear-gradient(90deg, #fdfcfb 0%, #e2d1c3 100%); */
     width: 100%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .section-title { font-size: 1.5rem; line-height: 2rem; }
+    .section-subtitle { font-size: 1rem; margin-top: 0.4rem; }
+    .section-img { width: 80%; }
+    .section-content { display: none; }
+    #second-section .fp-tableCell, #third-section .fp-tableCell {
+      flex-flow: column nowrap;
+      justify-content: center;
+    }
+  }
+
+  @media only screen and (max-width: 575px) {
+    #first-section .fp-tableCell, #second-section .fp-tableCell, #third-section .fp-tableCell {
+      padding-bottom: 93px;
+    }
   }
 
 /* ==========================================================================
@@ -397,7 +442,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .front {
     z-index: 500;
-    top: 150px;
+    top: 100px;
     width: 6000px;
   }
 
@@ -434,13 +479,59 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     left: 5100px;
   }
 
+  @media only screen and (max-width: 768px) {
+    .scroll {
+      position: initial;
+    }
+
+    .horizon {
+      display: none;
+    }
+
+    .middle {
+      display: none;
+    }
+
+    .front {
+      margin-top: 75px;
+      padding: 0 1rem;
+      width: 100%;
+    }
+
+    .intro {
+      position: initial;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+
+    .intro-title {
+      font-size: 1.2rem;
+    }
+
+    .intro-subtitle {
+      font-size: 1.5rem;
+    }
+
+    .page {
+      width: 100%;
+      background: #fff;
+      padding: 1.5rem;
+      position: initial;
+      margin-bottom: 2rem;
+    }
+
+    .about-team {
+      margin-bottom: 8rem;
+    }
+  }
+
 /* ==========================================================================
   Services Page Styles
   ========================================================================== */
 
   #techno-services-main {
     margin-top: 56px;
-    background-color: #fcf3e8;
+    background-color: #f3f0ec;
     z-index: 11;
     box-shadow: 1px 1px 4px 2px #eee;
   }
@@ -457,31 +548,51 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     transform: scale(1.05);
   }
 
+  .services-container {
+    padding: 1rem;
+  }
+
+  .services-container .card .card-body {
+    position: relative;
+  }
+
   .service-img {
     border-radius: 14px 14px 0 0 !important;
   }
 
   #service1 {
-    background-image: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 25%, #fad0c4 40%);
+    background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
   }
 
   #service2 {
-    background-image: linear-gradient(135deg, #4facfe 0%, #00f2fe 25%, #00f2fe 40%);
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
   }
 
   #service3 {
-    background-image: linear-gradient(135deg, #b3ffab 0%, #12fff7 25%, #12fff7 40%);
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
   }
 
   .btn-know-more {
-    background-color: rgb(251, 71, 107);
+    background-color: #4184ce;
     color: #fefefe;
-    box-shadow: 1px 1px 1px #ff0844;
+    box-shadow: 1px 1px 1px #3789e4;
     position: absolute;
     margin: 0 auto;
     left: 0;
     right: 0;
     width: 50%;
+    bottom: -19px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .services-container .card-group {
+      flex-flow: column nowrap;
+      margin-bottom: 76px;
+    }
+
+    .services-container .card {
+      margin-bottom: 2rem;
+    }
   }
 
 /* ==========================================================================
@@ -490,7 +601,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   #techno-product-main {
     margin-top: 56px;
-    background-color: #fff6ed;
+    background-color: #f3f0ec;
   }
 
   .product-container {
@@ -560,6 +671,25 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     display: initial;
   }
 
+  @media only screen and (max-width: 768px) {
+    .product-container {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 76px;
+    }
+
+    .product {
+      position: initial;
+      margin-bottom: 2rem;
+    }
+
+    .product.active {
+      padding: 1.5rem !important;
+    }
+  }
+
 
 /* ==========================================================================
   Portfolio Page Styles
@@ -571,6 +701,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .folio-container {
     overflow-x: auto;
+    margin-bottom: 66px;
   }
 
   .folio-one {
@@ -617,6 +748,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     /* writing-mode: vertical-rl; */
     transform: rotate(180deg);
     transition: all ease-in 0.4s;
+    font-size:26px;
   }
 
   .folio-content {
@@ -656,6 +788,10 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
       flex: 0 0 50%;
       max-width: 50%;
     }
+
+    .folio-container {
+      margin-bottom: 76px;
+    }
   }
 
 /* ==========================================================================
@@ -664,7 +800,12 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   #techno-contact-main {
     margin-top: 56px;
+    margin-bottom: 66px;
     background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+  }
+
+  @media only screen and (max-width: 575px) {
+    margin-bottom: 90px;
   }
 
 /* ==========================================================================
