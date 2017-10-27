@@ -29,8 +29,16 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed-navbar">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo right"><img src="img/logo.png" alt="Logo"></a>
+        <a href="index.html" class="brand-logo right"><img src="img/logo.png" alt="Logo"></a>
+        <a href="#" data-activates="mobile-navbar" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-navbar">
           <li><a href="#home">Home</a></li>
           <li><a href="#about-us">About Us</a></li>
           <li><a href="#services">Services</a></li>
@@ -47,22 +55,22 @@
         <li class="overlay">
           <img src="img/home-background_3.jpeg" alt="Slider"> <!-- random image -->
           <div class="caption center-align">
-            <h3>This is our big Tagline!</h3>
-            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            <h3>Innovate. Build. Test. Publish</h3>
+            <h5 class="light grey-text text-lighten-3">Delivering cutting edge business solution with aid of technology</h5>
           </div>
         </li>
         <li class="overlay">
           <img src="img/home-background_2.jpeg" alt="Slider"> <!-- random image -->
           <div class="caption left-align">
-            <h3>Left Aligned Caption</h3>
-            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            <h3>Accessible. Affordable. Education</h3>
+            <h5 class="light grey-text text-lighten-3">Deploying available technology to aid Education</h5>
           </div>
         </li>
         <li class="overlay">
           <img src="img/home-background_1.jpg" alt="Slider"> <!-- random image -->
           <div class="caption right-align">
-            <h3>Right Aligned Caption</h3>
-            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            <h3>Intuitive Mobility. Enriched UX</h3>
+            <h5 class="light grey-text text-lighten-3">Mobile apps aiding UX for Digital Future</h5>
           </div>
         </li>
       </ul>
@@ -73,14 +81,14 @@
     <section id="about-us" class="scrollspy">
       <div class="about-us-1">
         <div class="about-us-1-inner">
-          <h2>We are a new gen startup</h2>
-          <h5>Mainly working in 2 verticals viz <strong>Skills</strong> and <strong>Software Development</strong></h5>
+          <h3 class="about-us-heading">We are a new gen startup</h3>
+          <h5 class="about-us-subheading">Mainly working in 2 verticals viz <strong>Skills</strong> and <strong>Software Development</strong></h5>
         </div>
       </div>
       <div class="about-us-2">
         <div class="about-us-2-inner">
           <div class="row">
-            <div class="col m6 s12 about-us-box">
+            <div class="col m6 s12 about-us-box" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
               <img src="img/about-us-1.jpeg" class="responsive-img about-us-img" alt="About Us">
               <div class="about-us-content">
                 <h4 class="about-us-title">Software Development</h4>
@@ -90,7 +98,7 @@
                 <p class="about-us-text">Our team of dedicated software professionals focus to build quality products and services which are highly affordable and helpful to masses to bring about a positive change.</p>
               </div>
             </div>
-            <div class="col m6 s12 about-us-box">
+            <div class="col m6 s12 about-us-box" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
               <img src="img/about-us-2.jpeg" class="responsive-img about-us-img" alt="About Us">
               <div class="about-us-content">
                 <h4 class="about-us-title">Skills Development</h4>
@@ -112,7 +120,7 @@
           <div class="row">
             <h2 class="center-align white-text service-heading">Services</h2>
             <div class="col l4 m12">
-              <div class="card">
+              <div class="card" data-aos="flip-left" data-aos-offset="150">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img class="activator" src="img/service-2.jpg">
                 </div>
@@ -127,22 +135,22 @@
               </div>
             </div>
             <div class="col l4 m12">
-              <div class="card">
+              <div class="card" data-aos="flip-down" data-aos-offset="250">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img class="activator" src="img/service-3.jpg">
                 </div>
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Mobile App Development<i class="material-icons right">more_vert</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                  <span class="card-title activator grey-text text-darken-4">Mobile App Solutions<i class="material-icons right">more_vert</i></span>
+                  <p>We will convert your ideas into applications.</p>
                 </div>
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Mobile App Development<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                  <span class="card-title grey-text text-darken-4">Mobile App Solutions<i class="material-icons right">close</i></span>
+                  <p>We will convert your ideas into applications. We are working on some of the most innovative products to be launched in the latest and hottest mobile application development space. Our mobile applications development house is concentrating on initutive mobile apps for enriching user experience and be a part in making India Digital.</p>
                 </div>
               </div>
             </div>
             <div class="col l4 m12">
-              <div class="card">
+              <div class="card" data-aos="flip-right" data-aos-offset="150">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img class="activator" src="img/service-1.jpg">
                 </div>
@@ -168,42 +176,42 @@
         <div class="row">
           <h2 class="center-align portfolio-heading">Portfolio</h2>
           <div class="col xl3 l4 m6 s12">
-            <div class="folio folio-1">
+            <div class="folio folio-1" data-aos="fade-up" data-aos-offset="50">
               <img src="img/service-1.jpg" class="responsive-img materialboxed" data-caption="Caption" alt="Portfolio" />
             </div>
           </div>
           <div class="col xl3 l4 m6 s12">
-            <div class="folio folio-2">
+            <div class="folio folio-2" data-aos="fade-up" data-aos-offset="100">
               <img src="img/service-2.jpg" class="responsive-img materialboxed" data-caption="Caption" alt="Portfolio" />
             </div>
           </div>
           <div class="col xl3 l4 m6 s12">
-            <div class="folio folio-3">
+            <div class="folio folio-3" data-aos="fade-up" data-aos-offset="200">
               <img src="img/service-3.jpg" class="responsive-img materialboxed" data-caption="Caption" alt="Portfolio" />
             </div>
           </div>
           <div class="col xl3 l4 m6 s12">
-            <div class="folio folio-4">
+            <div class="folio folio-4" data-aos="fade-up" data-aos-offset="250">
               <img src="img/service-1.jpg" class="responsive-img materialboxed" data-caption="Caption" alt="Portfolio" />
             </div>
           </div>
           <div class="col xl3 l4 m6 s12">
-            <div class="folio folio-5">
+            <div class="folio folio-5" data-aos="fade-up" data-aos-offset="300">
               <img src="img/service-2.jpg" class="responsive-img materialboxed" data-caption="Caption" alt="Portfolio" />
             </div>
           </div>
           <div class="col xl3 l4 m6 s12">
-            <div class="folio folio-6">
+            <div class="folio folio-6" data-aos="fade-up" data-aos-offset="350">
               <img src="img/service-3.jpg" class="responsive-img materialboxed" data-caption="Caption" alt="Portfolio" />
             </div>
           </div>
           <div class="col xl3 l4 m6 s12">
-            <div class="folio folio-7">
+            <div class="folio folio-7" data-aos="fade-up" data-aos-offset="400">
               <img src="img/service-1.jpg" class="responsive-img materialboxed" data-caption="Caption" alt="Portfolio" />
             </div>
           </div>
           <div class="col xl3 l4 m6 s12">
-            <div class="folio folio-8">
+            <div class="folio folio-8" data-aos="fade-up" data-aos-offset="450">
               <img src="img/service-2.jpg" class="responsive-img materialboxed" data-caption="Caption" alt="Portfolio" />
             </div>
           </div>
@@ -213,7 +221,7 @@
     <!-- / Portfolio Section -->
 
     <!-- Contact Us Section -->
-    <footer class="page-footer scrollspy" id="contact-us">
+    <footer class="page-footer scrollspy" id="contact-us" data-aos="fade-up" data-aos-duration="3000">
       <div class="contact-us-container">
         <div class="row">
           <h2 class="center-align contact-us-heading">Contact Us</h2>
@@ -262,7 +270,7 @@
               </div>
             </div>
           </div>
-          <form class="col l7 s12">
+          <form class="col l7 s12" method="post" action="php/contact-form.php">
             <div class="row">
               <div class="input-field col m6 s12">
                 <i class="material-icons prefix">account_circle</i>

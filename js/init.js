@@ -5,14 +5,20 @@
 
 (function($){
   $(function(){
+    AOS.init({
+      duration: 1000,
+    });
+
     $('.scrollspy').scrollSpy();
 
     $('.materialboxed').materialbox();
 
+    $(".button-collapse").sideNav();
+
     var h = $(window).innerHeight();
     $('.slider').slider({
       height: h,
-      indicators: false,
+      indicators: true,
     });
     // $('.slider').slider('pause');
 

@@ -176,12 +176,41 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     border-radius: 8px;
   }
 
+  #sidenav-overlay {
+    z-index: 996;
+  }
+
+  #mobile-navbar {
+    background-color: #0E0F34;
+  }
+
+  #mobile-navbar li > a {
+    color: #fff;
+  }
+
+  #mobile-navbar li > a:hover {
+    background-color: #4E9BF8;
+  }
+
+  .brand-logo > img {
+    max-width: 240px;
+  }
+
 /* ==========================================================================
   Home Section Styles
   ========================================================================== */
 
   .slider .slides li .caption {
     z-index: 1;
+  }
+
+  .slider .indicators {
+    z-index: 11;
+    bottom: 8%;
+  }
+
+  .slider .indicators .indicator-item.active {
+    background-color: #0E0F34;
   }
 
 /* ==========================================================================
@@ -201,6 +230,10 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     color: #0E0F34;
   }
 
+  .about-us-heading {
+    margin-bottom: 2%;
+  }
+
   .about-us-2 {
     background-color: #0E0F34;
   }
@@ -215,6 +248,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .about-us-box {
     margin-top: -6%;
+    padding-bottom: 2% !important;
   }
 
   .about-us-title {
@@ -409,6 +443,12 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .navigate-up {
     margin: auto 0 auto auto;
+    background-color: #4E9BF8;
+    color: #fff;
+  }
+
+  .navigate-up:hover {
+    background-color: #EF403B;
   }
 
 /* ==========================================================================
@@ -505,8 +545,19 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 600px) {
     /* Style adjustments for viewports that meet the condition */
+    .about-us-box + .about-us-box {
+      margin-top: 2%;
+    }
+
+    .about-us-heading {
+      font-size: 1.8rem;
+    }
+
+    .about-us-subheading {
+      font-size: 1rem;
+    }
 }
 
 /* ==========================================================================
