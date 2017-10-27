@@ -202,6 +202,11 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .slider .slides li .caption {
     z-index: 1;
+    top: 35%;
+  }
+
+  .slider .slides li .caption h5 {
+    font-size: 1.2rem;
   }
 
   .slider .indicators {
@@ -232,6 +237,11 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .about-us-heading {
     margin-bottom: 2%;
+    font-size: 2rem;
+  }
+
+  .about-us-subheading {
+    font-size: 1.4rem;
   }
 
   .about-us-2 {
@@ -243,7 +253,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
     margin: auto;
     text-align: left;
     max-width: 1800px;
-    color: #4E9BF8;
+    color: #FFF;
   }
 
   .about-us-box {
@@ -253,10 +263,14 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .about-us-title {
     margin: 4% auto 2%;
+    font-size: 1.4rem;
   }
 
   .about-us-img {
     border-radius: 8px 8px 4px 4px;
+    width: 60%;
+    margin: auto;
+    text-align: center;
   }
 
   .about-us-text {
@@ -292,6 +306,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .service-heading {
     margin-bottom: 2.5%;
+    font-size: 2rem;
   }
 
   .services-container .card {
@@ -309,6 +324,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   .portfolio-heading {
     margin-bottom: 2.5%;
     color: #0E0F34;
+    font-size: 2rem;
   }
 
   .portfolio-container .col {
@@ -355,6 +371,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
 
   .contact-us-heading {
     margin-bottom: 2.5%;
+    font-size: 2rem;
   }
 
   .contact-us-info {
@@ -387,7 +404,7 @@ html, body, div, span, section, p, a, ul, ol, li, input, textarea, dl, dd, dt, t
   }
 
   .item-content-text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #4E9BF8;
   }
 
